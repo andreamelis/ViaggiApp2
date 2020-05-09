@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".VisualizzaPoi">
+
+    <!--Nome-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_gravity="center"
+            android:textColor="@color/red"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25dp"
+            android:text="Dati inseriti correttamente"/>
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="10dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!--Nome-->
+            <TextView
+                android:layout_gravity="center"                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/red"
+                android:text="Nome:"/>
+
+
+            <ImageButton
+                android:id="@+id/buttonPreferiti"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:background="@color/black"
+                app:srcCompat="@android:drawable/btn_star_big_on" />
+
+
+            <EditText
+                android:layout_gravity="center"
+                android:id="@+id/resultTextNome"
+                android:layout_width="260dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@color/colorAccent"
+                android:gravity="left"
+                android:inputType="textCapWords"
+                android:textColorHint="@color/white" />
+        </LinearLayout>
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="15dp"/>
+
+        <!--Descrizione-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/red"
+                android:text="Descrizione:"/>
+
+            <EditText
+                android:id="@+id/resultTextDescrizione"
+                android:layout_width="260dp"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:background="@color/colorAccent"
+                android:layout_marginLeft="21dp"
+                android:inputType="textCapWords"
+                android:textColorHint="@color/white" />
+
+        </LinearLayout>
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="15dp"/>
+
+        <!--Latitudine-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/red"
+                android:layout_gravity="center"
+                android:text="Latitudine:"/>
+
+            <EditText
+                android:id="@+id/resultTextLAtitudine"
+                android:layout_width="260dp"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:background="@color/colorAccent"
+                android:layout_marginLeft="32dp"
+                android:inputType="textCapWords"
+                android:textColorHint="@color/white" />
+
+        </LinearLayout>
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="15dp"/>
+
+        <!--Longitudine-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/red"
+                android:layout_gravity="center"
+                android:text="Longitudine:"/>
+
+            <EditText
+                android:id="@+id/resultTextLongitudine"
+                android:layout_width="260dp"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:background="@color/colorAccent"
+                android:layout_marginLeft="21dp"
+                android:inputType="textCapWords"
+                android:textColorHint="@color/white" />
+
+        </LinearLayout>
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="15dp"/>
+
+        <!--Altitudine-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/red"
+                android:text="Altitudine:"/>
+
+            <EditText
+                android:id="@+id/resultTextAltitudine"
+                android:layout_width="260dp"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:background="@color/colorAccent"
+                android:inputType="textCapWords"
+                android:layout_marginLeft="35dp"
+                android:textColorHint="@color/white" />
+
+        </LinearLayout>
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="15dp"/>
+
+        <!--Comune-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/red"
+                android:text="Comune:"/>
+
+            <EditText
+                android:id="@+id/resultTextComune"
+                android:layout_width="260dp"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:background="@color/colorAccent"
+                android:inputType="textCapWords"
+                android:layout_marginLeft="42dp"
+                android:textColorHint="@color/white" />
+
+        </LinearLayout>
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="15dp"/>
+
+        <!--Categoria-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/red"
+                android:text="Categoria:"/>
+
+            <EditText
+                android:id="@+id/resultTextCategoria"
+                android:layout_width="260dp"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:background="@color/colorAccent"
+                android:inputType="textCapWords"
+                android:layout_marginLeft="35dp"
+                android:textColorHint="@color/white" />
+
+        </LinearLayout>
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="15dp"/>
+
+        <!--Hashtag-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="5dp"/>
+            <EditText
+                android:id="@+id/resultHashtagUno"
+                android:layout_width="260dp"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:background="@color/colorAccent"
+                android:layout_marginLeft="100dp"
+                android:textColorHint="@color/white" />
+
+        </LinearLayout>
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="10dp"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/red"
+                android:text="Hashtag:"/>
+
+            <EditText
+                android:id="@+id/resultHashtagDue"
+                android:layout_width="260dp"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:background="@color/colorAccent"
+                android:inputType="textCapWords"
+                android:layout_marginLeft="44dp"
+                android:textColorHint="@color/white" />
+        </LinearLayout>
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="10dp"/>
+        <EditText
+            android:id="@+id/resultHashtagTre"
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:background="@color/colorAccent"
+            android:inputType="textCapWords"
+            android:layout_marginLeft="100dp"
+            android:textColorHint="@color/white" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="5dp"/>
+
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="15dp"/>
+
+        <!--Visitabile-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/red"
+                android:text="Visitabile:"/>
+
+
+            <EditText
+                android:id="@+id/resultVisitabile"
+                android:layout_width="260dp"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:background="@color/colorAccent"
+                android:inputType="textCapWords"
+                android:layout_marginLeft="40dp"
+                android:textColorHint="@color/white" />
+
+        </LinearLayout>
+
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="10dp"/>
+
+        <!--Inserisci-->
+        <Button
+            android:id="@+id/buttonIndietro"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:background="@color/red"
+            android:text="Torna alla Home page" />
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Project Poi</string>
+    <string name="tab_text_1">Home Page</string>
+    <string name="tab_text_2">Menù</string>
+    <string name="nomeApp">ViaggiApp</string>
+    <string name="hashtagUno">#poioftheday</string>
+    <string name="hashtagDue">#daevitare</string>
+    <string name="hashtagTre">#lovesardinia</string>
+    <string name="textVisitabileTrue">#Si</string>
+    <string name="textVisitabileFalse">#No</string>
+
+    <!-- array di stringhe per lo spinner -->
+    <string-array name="spinner_array">
+        <item>Spiaggia</item>
+        <item>Lago</item>
+        <item>Belvedere</item>
+        <item>Museo</item>
+        <item>Monumento</item>
+        <item>Altro</item>
+    </string-array>
+</resources>
