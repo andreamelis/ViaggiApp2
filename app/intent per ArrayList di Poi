@@ -1,0 +1,12 @@
+    ArrayList<Poi> poiDinamico = new ArrayList<Poi>();
+
+    /**catturo l'intent*/
+            Intent intentVd = getIntent();
+            /**l'oggetto che abbiamo passato è un Serializable, per salvarlo uso la stessa stringa
+             che ho usato nella putExtra*/
+            Serializable objVd = intentVd.getSerializableExtra(VisualizzaTutto.PATH);
+
+            if(objVd instanceof ArrayList){
+                poiDinamico = (ArrayList<Poi>) objVd; //cast esplicito, se lascio obj non posso chiamare i metodi di poi
+            }
+            else poiDinamico.add(poi);

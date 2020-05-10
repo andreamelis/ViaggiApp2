@@ -24,8 +24,7 @@ public class Inserimento extends AppCompatActivity
         implements GoogleApiClient.OnConnectionFailedListener,
         GoogleApiClient.ConnectionCallbacks
 {
-    //costante che definisce il path dell'oggetto Poi
-
+    /**costante che definisce il path dell'oggetto Poi*/
     public static final String PATH ="com.example.projectpoi.Poi";
 
     /**variabili xml*/
@@ -116,29 +115,32 @@ public class Inserimento extends AppCompatActivity
 
         inviaDatiPoi.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) { //quando premo il pulsante Inserisci
+            public void onClick(View v) { /**quando premo il pulsante Inserisci*/
                 if (checkData()) {
                     try {
-                        UpdatePoi(); //provo ad aggiornare i valori del Poi
-                    } catch (NumberFormatException e) { //se qualcosa è andato storto catturo l'eccezione
+                        UpdatePoi(); /**provo ad aggiornare i valori del Poi*/
+                    } catch (NumberFormatException e) { /**se qualcosa è andato storto catturo l'eccezione*/
                         /**genero il toast*/
                         Toast toast = Toast.makeText(getApplicationContext(),
                                 "Inserisci una categoria tra quelle indicate", Toast.LENGTH_LONG);
-                        toast.show(); //mostro il toast
-                        return; //esco
+                        toast.show(); /**mostro il toast*/
+                        return; /**esco*/
                     }
                     /**genero un Intent*/
-                    Intent intent = new Intent(Inserimento.this, VisualizzaTutto.class);
+                    Intent intent = new Intent(Inserimento.this, VisualizzaPoi.class);
+
                     /**appendo all'Intent il mio poi che dovrebbe essere pieno
                      *  perchè ho chiamato la funzione updatePoi*/
+
                     intent.putExtra(PATH, poi);
-                    /**chiamo la nuova activity (ResultActivity)*/
+
+                    /**chiamo la nuova activity (VisualizzaPoi)*/
                     startActivity(intent);
                 }
             }
         });
 
-        /*Localizzazione */
+        /**Localizzazione */
 
         /**mi serve per chiamare l'Api di Google Play Service*/
         mGoogleApiClient = new GoogleApiClient.Builder(this)
@@ -267,7 +269,6 @@ public class Inserimento extends AppCompatActivity
         onCheckboxClicked(cbHashtagDue);
         onCheckboxClicked(cbHashtagTre);
         onRadioButtonClicked(rbVisitabileFalse);
-
 
     }
 

@@ -6,17 +6,17 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
-import android.widget.TextView;
 
 import java.io.Serializable;
 
 public class VisualizzaPoi extends AppCompatActivity {
 
-    TextView nomeTextRes, comuneTextRes, descrizioneTextRes, altitudineTextRes, longitudineTextRes,
+    EditText nomeTextRes, comuneTextRes, descrizioneTextRes, altitudineTextRes, longitudineTextRes,
             latitudineTextRes, categoriaTextRes, hashtagUnoRes, hashtagDueRes, hashtagTreRes, visitabileRes;
 
-    Button confermaPoi;
+    Button btIndietro, btInvia;
     ImageButton preferiti;
 
     Poi poi;
@@ -40,13 +40,14 @@ public class VisualizzaPoi extends AppCompatActivity {
         visitabileRes = findViewById(R.id.resultVisitabile);
 
         /**Associo i miei oggetti di tipo Button ai button del file xml*/
-        confermaPoi = findViewById(R.id.buttonIndietro);
+        btIndietro = findViewById(R.id.buttonIndietro);
+        btInvia = findViewById(R.id.buttonInvia);
         preferiti = findViewById(R.id.buttonPreferiti);
 
-        //catturo l'intent
+        /**catturo l'intent*/
         Intent intent = getIntent();
-        //l'oggetto che abbiamo passato è un Serializable, per salvarlo uso la stessa stringa
-        //che ho usato nella putExtra
+        /**l'oggetto che abbiamo passato è un Serializable, per salvarlo uso la stessa stringa
+        che ho usato nella putExtra*/
         Serializable obj = intent.getSerializableExtra(Inserimento.PATH);
 
         if(obj instanceof Poi){
@@ -54,7 +55,7 @@ public class VisualizzaPoi extends AppCompatActivity {
         }
         else poi = new Poi();
 
-        //riempio le mie textview con le proprietà passate dal poi
+        /**riempio le mie textview con le proprietà passate dal poi*/
         fillPoi(poi);
 
 
@@ -66,20 +67,32 @@ public class VisualizzaPoi extends AppCompatActivity {
             }
         });
 
-
-
-
-
-        //quando premo conferma torno all'activity precedente
-        confermaPoi.setOnClickListener(new View.OnClickListener() {
+        /**quando premo Indietro torno all'activity precedente*/
+        btIndietro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(VisualizzaPoi.this, MainActivity.class);
+                Intent intent = new Intent(VisualizzaPoi.this, Inserimento.class);
                 startActivity(intent);
             }
         });
-    }
+        /**quando premo Indietro torno all'activity precedente*/
+        btInvia.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) { //quando premo il pulsante Inserisci
 
+                    /**genero un Intent*/
+                    Intent intent = new Intent(VisualizzaPoi.this, VisualizzaTutto.class);
+
+                    /**appendo all'Intent il mio poi che dovrebbe essere pieno
+                     *  perchè ho chiamato la funzione updatePoi*/
+                    intent.putExtra("com.example.projectpoi.Poi", poi);
+                    /**chiamo la nuova activity (ResultActivity)*/
+                    startActivity(intent);
+                }
+
+        });
+
+    }
 
     /**
      * Funzione che riempie le TextView del file activity_result.xml con i valori del poi
@@ -100,17 +113,3 @@ public class VisualizzaPoi extends AppCompatActivity {
         visitabileRes.setText(poi.getVisitabile());
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-

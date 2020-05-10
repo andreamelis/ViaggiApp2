@@ -14,7 +14,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".VisualizzaTutto"></activity>
+        <activity android:name=".VisualizzaComune"></activity>
+        <activity android:name=".VisualizzaTutto" />
         <activity android:name=".VisualizzaPoi" />
         <activity android:name=".SplashScreen">
             <intent-filter>

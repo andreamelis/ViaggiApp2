@@ -1,4 +1,5 @@
 package com.example.viaggiapp.ui.main;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -7,14 +8,12 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-
 import com.example.viaggiapp.FiltraPerComune;
 import com.example.viaggiapp.Inserimento;
 import com.example.viaggiapp.R;
-import com.example.viaggiapp.VisualizzaPoi;
 import com.example.viaggiapp.VisualizzaTutto;
 
-public class FragmentMenu extends Fragment   {
+public class FragmentMenu extends Fragment {
 
     @Override
     public View onCreateView(

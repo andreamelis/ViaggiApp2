@@ -15,11 +15,13 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.example.viaggiapp.ui.main.SectionsPagerAdapter;
 
-public class MainActivity extends AppCompatActivity {
+import java.util.ArrayList;
 
+public class MainActivity extends AppCompatActivity {
     Button buttonInserimento;
 
     @Override
@@ -31,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
         viewPager.setAdapter(sectionsPagerAdapter);
         TabLayout tabs = findViewById(R.id.tabs);
         tabs.setupWithViewPager(viewPager);
+
 
         /**Creo un vettore di due elementi per memorizzare la posizione delle icone,
          * nella posizione uno ci sarà l'icona Home, mentre nella due ci sarà l'icona del menù

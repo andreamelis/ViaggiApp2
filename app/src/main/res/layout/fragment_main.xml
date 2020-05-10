@@ -11,6 +11,9 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
+            android:layout_gravity="center"
+            android:textSize="24sp"
+            android:textStyle="bold"/>
         <ImageView
             android:id="@+id/imageView2"
             android:layout_width="93dp"
@@ -22,20 +25,27 @@
             android:layout_height="match_parent"
             android:orientation="horizontal">
 
-            <ImageView
-                android:id="@+id/imageView3"
-                android:layout_width="185dp"
-                android:layout_height="170dp"
-                android:src="@drawable/img_cala_goloritze" />
+            <Space
+                android:layout_width="15dp"
+                android:layout_height="wrap_content" />
 
-            <ImageView
-                android:id="@+id/imageView4"
-                android:layout_width="225dp"
+            <Button
+                android:id="@+id/btCalaGoloritze"
+                android:layout_width="170dp"
                 android:layout_height="170dp"
-                android:layout_weight="1"
-                android:src="@drawable/img_flyboard" />
+                android:drawableRight="@drawable/img_cala_goloritze"
+                android:gravity="center" />
+
+            <Button
+                android:id="@+id/btFlyboard"
+                android:layout_width="170dp"
+                android:layout_height="170dp"
+                android:drawableRight="@drawable/img_flyboard"
+                android:gravity="center" />
 
         </LinearLayout>
+
+
 
     </LinearLayout>
 
